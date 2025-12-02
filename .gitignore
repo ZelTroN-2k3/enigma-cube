@@ -1,0 +1,40 @@
+# --- Système & OS ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- IDE & Éditeurs (VS Code, PhpStorm, Sublime...) ---
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+
+# --- Configuration Sensible (TRÈS IMPORTANT) ---
+# Empêche de commiter vos mots de passe BDD locaux
+System/config/database.php
+application/config/database.php
+config.php
+
+# --- Framework Kohana & PHP ---
+# Logs et cache générés par le serveur
+application/logs/*
+application/cache/*
+system/logs/*
+system/cache/*
+!application/logs/index.html
+!application/cache/index.html
+
+# Dépendances PHP (si vous ajoutez Composer plus tard)
+vendor/
+
+# --- Node.js (Pour la partie multijoueur) ---
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# --- Assets & Uploads ---
+# Si les utilisateurs peuvent uploader des images, ignorez le dossier
+# uploads/
+# public/uploads/
