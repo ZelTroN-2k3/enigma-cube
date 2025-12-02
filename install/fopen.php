@@ -81,7 +81,7 @@ defined( 'SYSPATH' ) OR die( 'No direct access allowed.' );
 
 \$config['cache'] = FALSE; //Activer ou non le cache
 
-\$config['money'] = 'pts'; // money du jeu
+\$config['money'] = '$'; // money du jeu
 
 \$config['id_article_preambule'] = 67; //Article par defaut qui presente le jeu tout au début - Si FALSE, il n'y aura pas de préambule
 

@@ -5,9 +5,12 @@ defined( 'SYSPATH' ) or die( 'No direct access allowed.' );
 $config['system'] = array( 'map',
 		'html',
 		'article',
-		'bot',
+		'fight',
 		'move',
-		'checkpoint',
+		'object',
 		'php',
-		'quete');
+		'quete',
+		'shop',
+		'sleep',
+		'sort' );
 ?>

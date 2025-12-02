@@ -1,4 +1,7 @@
 <?php
+// 1. CORRECTIF TIMEZONE (Ajoutez cette ligne)
+date_default_timezone_set('Europe/Paris');
+
 define( 'IN_PRODUCTION', FALSE );
 
 session_start();
@@ -11,7 +14,8 @@ $kohana_system = './system';
 
 version_compare( PHP_VERSION, '5.2', '<' ) and exit( 'Mon RPG utilise au minimum PHP 5.2.' );
 
-error_reporting( E_ALL & ~E_STRICT );
+// 2. CORRECTIF ERREURS (Remplacez l'ancien error_reporting par celui-ci)
+error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 
 ini_set( 'display_errors', TRUE );
 

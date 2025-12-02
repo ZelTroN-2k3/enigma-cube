@@ -23,7 +23,9 @@ class Authentic_Controller extends Controller {
 				if( $authentic->logged_in() )
 				{
 						$this->user = $authentic->get_user();
-
+						// --- AJOUT CORRECTIF ---
+						$this->role = new stdClass(); 
+						// -----------------------
 						$this->role->name = $this->user->roles->select_list( 'id', 'name' );
 
 						$this->role->description = $this->user->roles->select_list( 'id', 'description' );
@@ -58,7 +60,7 @@ class Authentic_Controller extends Controller {
 		 */
 		protected function access( $type )
 		{
-				$this->login();
+				self::login();
 
 				if( (!in_array( $type, $this->role->name ) && !in_array( 'admin', $this->role->name ) ) )
 						return url::redirect( 'auth' );

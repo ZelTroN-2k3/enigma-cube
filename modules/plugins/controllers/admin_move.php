@@ -18,6 +18,7 @@ class Admin_Move_Controller extends Controller {
 		public function index( &$view )
 		{
 				$view->region = Region_Model::instance()->listing_parent();
+				$view->items = Item_Model::instance()->select();
 		}
 
 }

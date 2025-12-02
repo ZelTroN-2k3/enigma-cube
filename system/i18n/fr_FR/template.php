@@ -4,8 +4,7 @@ defined( 'SYSPATH' ) OR die( 'No direct access allowed.' );
 
 $lang = array
 		(
-    'close' => 'Fermer',
-    'modif' => 'Modifier',
+		'modif' => 'Modifier',
 		'profil' => 'Profil',
 		'badge' => 'Badges',
 		'job' => 'Métier',

@@ -1,6 +1,16 @@
 <?php defined( 'SYSPATH' ) OR die( 'No direct access allowed.' );  ?>
+<?php if( $data->image ) : ?>
+		<div class="avatarAction" id="avatarAction" style="background-image:url('<?php echo url::base(); ?>images/modules/<?php echo $data->image; ?>');"></div>
+<?php endif ?>
 <div class="contenerActionStat">
-		<h1><?php echo $list_quete->title; ?></h1>
+		<h1><?php echo $data->title; ?>
+				<?php if( $admin ) : ?>
+						<a href="<?php echo url::base(); ?>admin/index.php/elements/show/<?php echo $data->id; ?>"  title="<?php	echo	Kohana::lang(	'form.edit'	);	?>" target="blank"><img src="<?php echo url::base(); ?>images/orther/edit.png"  alt="<?php	echo	Kohana::lang(	'form.edit'	);	?>"/></a>
+				<?php endif; ?></h1>
+		<h3><?php echo $list_quete->title; ?>
+				<?php if( $admin ) : ?>
+						<a href="<?php echo url::base(); ?>admin/index.php/quetes/show/<?php echo $list_quete->id_quete; ?>"  title="<?php	echo	Kohana::lang(	'form.edit'	);	?>" target="blank"><img src="<?php echo url::base(); ?>images/orther/edit.png"  alt="<?php	echo	Kohana::lang(	'form.edit'	);	?>"/></a>
+				<?php endif; ?></h3>
 </div>
 <div class="center">
 		<?php
@@ -23,6 +33,6 @@
 						break;
 		}
 		?>
-		<input type="button" class="button orange" data-url="<?php echo $url; ?>" value="<?php echo $value; ?>"/>
+		<input type="button" class="button button_vert" onclick="overlay.load( '<?php echo $url; ?>' )" value="<?php echo $value; ?>"/>
 </div>
 <div class="spacer"></div>

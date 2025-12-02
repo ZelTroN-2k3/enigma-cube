@@ -1,17 +1,17 @@
 #facebox .b {
-		background:url('../images/overlay/b.png');
+		background:url('../images/orther/b.png');
 }
 #facebox .tl {
-		background:url('../images/overlay/tl.png');
+		background:url('../images/orther/tl.png');
 }
 #facebox .tr {
-		background:url('../images/overlay/tr.png');
+		background:url('../images/orther/tr.png');
 }
 #facebox .bl {
-		background:url('../images/overlay/bl.png');
+		background:url('../images/orther/bl.png');
 }
 #facebox .br {
-		background:url('../images/overlay/br.png');
+		background:url('../images/orther/br.png');
 }
 #facebox {
 		position: absolute;
